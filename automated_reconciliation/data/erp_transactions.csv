@@ -1,0 +1,4 @@
+txn_id,date,amount,description
+1,2026-04-01,10000,Client A Payment
+2,2026-04-02,5000,Office Expense
+3,2026-04-03,8000,Client B Payment

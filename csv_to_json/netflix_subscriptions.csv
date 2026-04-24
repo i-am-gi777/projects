@@ -1,0 +1,6 @@
+user_id,name,plan,start_date,end_date,is_active,monthly_cost
+U001,Alice,Premium,2023-01-10,2024-01-10,true,17.99
+U002,Bob,Standard,2023-05-01,,true,13.99
+U003,Charlie,Basic,2022-11-15,2023-11-15,false,9.99
+U004,David,Premium,2024-02-01,,true,17.99
+

@@ -1,0 +1,4 @@
+{"user_id":"U001","name":"Alice","plan":"Premium","start_date":"2023-01-10","end_date":"2024-01-10","is_active":true,"monthly_cost":17.99}
+{"user_id":"U002","name":"Bob","plan":"Standard","start_date":"2023-05-01","is_active":true,"monthly_cost":13.99}
+{"user_id":"U003","name":"Charlie","plan":"Basic","start_date":"2022-11-15","end_date":"2023-11-15","is_active":false,"monthly_cost":9.99}
+{"user_id":"U004","name":"David","plan":"Premium","start_date":"2024-02-01","is_active":true,"monthly_cost":17.99}

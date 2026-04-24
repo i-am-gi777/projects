@@ -1,0 +1,40 @@
+
+
+services:
+
+  localstack:
+    image: localstack/localstack:3.5
+    container_name: localstack-main
+    ports:
+      - "4566:4566"
+    environment:
+      SERVICES: s3,glue,redshift,iam,sts
+      DEBUG: 1
+      DEFAULT_REGION: us-east-1
+      AWS_ACCESS_KEY_ID: test
+      AWS_SECRET_ACCESS_KEY: test
+      LS_LOG: trace
+    volumes:
+      - "/var/run/docker.sock:/var/run/docker.sock"
+      - "./localstack-data:/var/lib/localstack"
+
+  postgres:
+    image: postgres:14
+    container_name: postgres-db
+    environment:
+      POSTGRES_USER: admin
+      POSTGRES_PASSWORD: admin
+      POSTGRES_DB: financials
+    ports:
+      - "5432:5432"
+
+  spark:
+    image: jupyter/pyspark-notebook:python-3.11
+    container_name: spark-etl
+    depends_on:
+      - localstack
+      - postgres
+    volumes:
+      - .:/home/jovyan/work
+    ports:
+      - "8888:8888"

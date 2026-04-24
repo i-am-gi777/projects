@@ -1,0 +1,5 @@
+transaction_id,tax_rate,tax_amount,state
+TXN001,0.085,106.29,TX
+TXN002,0.0625,55.67,CA
+TXN003,0.085,178.50,TX
+TXN004,0.08,36.02,NY
